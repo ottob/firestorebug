@@ -10,9 +10,16 @@ const firebaseConfig = {
 };
 
 const firebaseApp = initializeApp(firebaseConfig)
+
 // This doesnt work.
 const firestore = getFirestore(firebaseApp)
+
 // This works.
+// const db = initializeFirestore(firebaseApp, {
+//   useFetchStreams: false,
+// } as any)
+
+// This also works.
 // const firestore = initializeFirestore(firebaseApp, {
 //   experimentalForceLongPolling: true,
 // })
